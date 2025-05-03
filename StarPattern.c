@@ -5,7 +5,7 @@ int main()
     int num, j;
     scanf("%d", &num);
 
-    for (int i = 1; i <= num; i++)
+    for (int i = num; i >= 1; i--)
     {
         /* code */
         for (j = 1; j <= i; j++)
@@ -13,8 +13,8 @@ int main()
             /* code */
             printf("*");
         }
-        // printf("\n");
-        if (j <= num)
+
+        if (j > 2)
         {
             /* code */
             printf("\n");
