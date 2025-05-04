@@ -5,9 +5,9 @@ int main()
     int linesOfStar;
     scanf("%d", &linesOfStar);
 
-    int i, j, k, star = 1, space = linesOfStar - 1;
+    int i, j, k, space = linesOfStar - 1;
 
-    for (i = 0; i < linesOfStar; i++)
+    for (i = 1; i <= linesOfStar; i++)
     {
         for (k = 1; k <= space; k++)
         {
@@ -16,19 +16,16 @@ int main()
         }
         space--;
 
-        for (j = 1; j <= star; j++)
+        for (j = 1; j <= i; j++)
         {
             /* code */
-            printf("*");
+            printf("%d", j);
         }
-
-        if (i < linesOfStar - 1)
+        if (i < linesOfStar)
         {
             /* code */
             printf("\n");
         }
-
-        star++;
     }
 
     return 0;
