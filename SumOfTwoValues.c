@@ -2,7 +2,7 @@
 
 int main()
 {
-    int array_size, i, j, k, sumNumber;
+    int array_size, i, j, yesCount = 0, sumNumber;
     scanf("%d", &array_size);
     int arr[array_size];
 
@@ -14,20 +14,28 @@ int main()
 
     scanf("%d", &sumNumber);
 
-    for (j = 0; j < array_size; j++)
+    for (i = 0; i < array_size; i++)
     {
         /* code */
-        
-        if (arr[j] + arr[k] == sumNumber)
+        for (j = i + 1; j < array_size; j++)
         {
             /* code */
-            printf("Yes");
-            break;
+            if (arr[i] + arr[j] == sumNumber)
+            {
+                /* code */
+                yesCount++;
+            }
         }
-        else
-        {
-            printf("No");
-        }
+    }
+
+    if (yesCount > 0)
+    {
+        /* code */
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
     }
 
     return 0;
